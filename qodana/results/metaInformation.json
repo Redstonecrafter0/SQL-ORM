@@ -1,13 +1,13 @@
 {
-  "total": 1,
+  "total": 0,
   "tools inspection": {
-    "Code Inspection": 1
+    "Code Inspection": 0
   },
   "attributes": {
     "vcs": {
       "sarifIdea": {
         "repositoryUri": "https://github.com/Redstonecrafter0/SQL-ORM",
-        "revisionId": "bb5986d27fa5d896558ac63b842eba9cb55f044f",
+        "revisionId": "47ce8c3f9b94d72cf82b6d2f6eaa358c65e65121",
         "branch": "master"
       }
     },
