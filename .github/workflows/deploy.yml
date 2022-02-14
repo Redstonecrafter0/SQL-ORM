@@ -27,13 +27,7 @@ jobs:
       - name: Create Release Note
         run: 'sed -i "s/{{ VERSION }}/$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)/" RELEASE_NOTE.md'
       - name: Release
-        run: |
-          set -x
-          assets=()
-          for asset in ./target/*.jar; do
-            assets+=("-a" "$asset")
-          done
-          hub release create "${assets[@]}" -F RELEASE_NOTE.md v$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)'
+        run: 'hub release create -a "target/sql-orm-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout).jar" -F RELEASE_NOTE.md v$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Deploy to GitHub Package Registry
