@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>SQL-ORM</title>
+<link href="images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="scripts/sourceset_dependencies.js" async="async"></script><link href="styles/style.css" rel="Stylesheet"><link href="styles/jetbrains-mono.css" rel="Stylesheet"><link href="styles/main.css" rel="Stylesheet"><link href="styles/prism.css" rel="Stylesheet"><link href="styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="scripts/clipboard.js" async="async"></script><script type="text/javascript" src="scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="scripts/main.js" defer="defer"></script><script type="text/javascript" src="scripts/prism.js" async="async"></script>  </head>
+  <body>
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="index.html">SQL-ORM</a></div>
+      <div></div>
+      <div class="pull-right d-flex"><button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <div class="main-content" id="content" pageIds="SQL-ORM::////PointingToDeclaration//504668339">
+          <div class="breadcrumbs"></div>
+          <div class="cover ">
+            <h1 class="cover"><span><span>SQL-ORM</span></span></h1>
+            <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable="SQL-ORM/JVM"><p class="paragraph">This project aims to simplify database access by leveraging the potential of Kotlin's data classes.</p><p class="paragraph">First create your model with a dataclass.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">data class TestModel(<br>    @PrimaryKey var id: Long = -1, // The primary key is marked with its annotation and initialized with an unused value. It will change once added.<br>    @SQLChar(5) var char: String,<br>    @SQLVarchar(5) var varchar: String,<br>    var text: String, // Use the SQLChar or SQLVarChar annotation to use those types. If omitted it will be Text. No effect on SQLite.<br>    var int: Int,<br>    var bigInt: Long,<br>    var blob: ByteArray?, // Nullability is adopted<br>    var boolean: Boolean,<br>    var float: Float,<br>    var double: Double<br>) { // When using a ByteArray you must autogenerate those functions. <br>    override fun equals(other: Any?): Boolean {<br>        if (this === other) return true<br>        if (javaClass != other?.javaClass) return false<br>        other as TestModel<br>        if (id != other.id) return false<br>        if (char != other.char) return false<br>        if (varchar != other.varchar) return false<br>        if (text != other.text) return false<br>        if (int != other.int) return false<br>        if (bigInt != other.bigInt) return false<br>        if (blob != null) {<br>            if (other.blob == null) return false<br>            if (!blob.contentEquals(other.blob)) return false<br>        } else if (other.blob != null) return false<br>        if (boolean != other.boolean) return false<br>        if (float != other.float) return false<br>        if (double != other.double) return false<br>        return true<br>    }<br>    override fun hashCode(): Int {<br>        var result = id.hashCode()<br>        result = 31 * result + char.hashCode()<br>        result = 31 * result + varchar.hashCode()<br>        result = 31 * result + text.hashCode()<br>        result = 31 * result + int<br>        result = 31 * result + bigInt.hashCode()<br>        result = 31 * result + (blob?.contentHashCode() ?: 0)<br>        result = 31 * result + boolean.hashCode()<br>        result = 31 * result + float.hashCode()<br>        result = 31 * result + double.hashCode()<br>        return result<br>    }<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">If that's done you can initialize your db connection.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val db = Database(<br>    DriverManager.getConnection(&quot;jdbc:sqlite::memory:&quot;), // Use the standard DriverManager to create the underlying connection.<br>    SQLiteTranslator // Use the Translator object you need for creation of the SQL queries.<br>)<br><br>db.makeCurrent() // Use this call to access the db directly by the Database companion object.<br>// Else replace `Database` with `db` in the following code.</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Next, create that table.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">Database.createTable&lt;TestModel&gt;()</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Add your first entry.<br>When a new entity is inserted the primary key you defined will automatically be updated.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val entity = TestModel(<br>    char = &quot;chars&quot;,<br>    varchar = &quot;char&quot;,<br>    text = &quot;text&quot;,<br>    int = 5,<br>    bigInt = Int.MAX_VALUE + 10L,<br>    blob = byteArrayOf(4, 2, 0),<br>    boolean = true,<br>    float = .2F,<br>    double = .2<br>)<br><br>Database += entity // It can be done like this, but it's a better idea to use `set` and `update` directly.<br>Database.set(entity) // Inserts a new entity.<br>Database.update(entity) // updates an existing entity.</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Querying is the biggest reason for writing this library. It uses Kotlin's reference for a property.</p><p class="paragraph">Here are some examples.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val entity = Database.query&lt;TestModel&gt; {<br>    TestModel::id eq 5L<br>}.first()<br><br>val entities = Database.query&lt;TestModel&gt; {<br>    ((TestModel::id notEq 5L) and (TestModel::id less 10L)) <br>    or ((TestModel::text eq &quot;text&quot;) and (TestModel::bigInt eq 50L))<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">All valid operations are:</p><ul><li><p class="paragraph">eq</p></li><li><p class="paragraph">notEq</p></li><li><p class="paragraph">greater</p></li><li><p class="paragraph">less</p></li><li><p class="paragraph">greaterEq</p></li><li><p class="paragraph">lessEq</p></li><li><p class="paragraph">between</p></li><li><p class="paragraph">notBetween</p></li><li><p class="paragraph">like</p></li><li><p class="paragraph">notLike</p></li><li><p class="paragraph">isIn</p></li><li><p class="paragraph">notIn</p></li><li><p class="paragraph">and</p></li><li><p class="paragraph">or</p></li></ul><p class="paragraph">Count, sum and avg use the same queries.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val countGreaterFive = Database.count&lt;TestModel&gt; { TestModel::id greater 5L }<br>val countAll = Database.count&lt;TestModel&gt;() // When omitting the query everything will apply. This works also for other methods using queries.<br>val sum = Database.sum&lt;TestModel&gt;(TestModel::int) { TestModel::id greater 5L }<br>val avg = Database.avg&lt;TestModel&gt;(TestModel::int)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+          </div>
+          <h2 class="">Packages</h2>
+          <div class="table"><a data-name="1046779441%2FPackages%2F504668339" anchor-label="net.redstonecraft.sqlorm" id="1046779441%2FPackages%2F504668339" data-filterable-set="SQL-ORM/JVM"></a>
+            <div class="table-row" data-filterable-current="SQL-ORM/JVM" data-filterable-set="SQL-ORM/JVM">
+              <div>
+                <div class="main-subrow ">
+                  <div class=""><span class="inline-flex">
+                      <div><a href="-s-q-l--o-r-m/net.redstonecraft.sqlorm/index.html">net.redstonecraft.sqlorm</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1046779441%2FPackages%2F504668339"></span>
+                        <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                      </span></span></div>
+                  <div class="pull-right"></div>
+                </div>
+                <div></div>
+              </div>
+            </div>
+<a data-name="268946738%2FPackages%2F504668339" anchor-label="net.redstonecraft.sqlorm.statement" id="268946738%2FPackages%2F504668339" data-filterable-set="SQL-ORM/JVM"></a>
+            <div class="table-row" data-filterable-current="SQL-ORM/JVM" data-filterable-set="SQL-ORM/JVM">
+              <div>
+                <div class="main-subrow ">
+                  <div class=""><span class="inline-flex">
+                      <div><a href="-s-q-l--o-r-m/net.redstonecraft.sqlorm.statement/index.html">net.redstonecraft.sqlorm.statement</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="268946738%2FPackages%2F504668339"></span>
+                        <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                      </span></span></div>
+                  <div class="pull-right"></div>
+                </div>
+                <div></div>
+              </div>
+            </div>
+<a data-name="-1058344197%2FPackages%2F504668339" anchor-label="net.redstonecraft.sqlorm.translator" id="-1058344197%2FPackages%2F504668339" data-filterable-set="SQL-ORM/JVM"></a>
+            <div class="table-row" data-filterable-current="SQL-ORM/JVM" data-filterable-set="SQL-ORM/JVM">
+              <div>
+                <div class="main-subrow ">
+                  <div class=""><span class="inline-flex">
+                      <div><a href="-s-q-l--o-r-m/net.redstonecraft.sqlorm.translator/index.html">net.redstonecraft.sqlorm.translator</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1058344197%2FPackages%2F504668339"></span>
+                        <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                      </span></span></div>
+                  <div class="pull-right"></div>
+                </div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  </body>
+</html>
+
