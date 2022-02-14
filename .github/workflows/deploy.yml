@@ -30,10 +30,3 @@ jobs:
         run: 'hub release create -a "target/sql-orm-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout).jar" -F RELEASE_NOTE.md v$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Deploy to GitHub Package Registry
-        uses: simontunnat/action-maven-deploy@v1.1
-        with:
-          username: Redstonecrafter0
-          password: ${{ secrets.GITHUB_TOKEN }}
-          repository: https://maven.pkg.github.com/Redstonecrafter0/SQL-ORM
-          maven-goals: 'clean source:jar deploy'
