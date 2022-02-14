@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("../../static/font/JetBrainsMonoNL-Regular.ttf") format("truetype");
+}
+body {
+    background: #121212;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+* {
+    color: white;
+    font-family: "JetBrains Mono", "Segoe UI", sans-serif;
+}
+main {
+    flex: 1;
+    text-align: center;
+}
+#title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: black;
+    height: 100px;
+}
+section {
+    margin: 40px;
+}
+section a {
+    text-decoration: underline transparent;
+    transition: 100ms;
+}
+section a:hover {
+    text-decoration: underline white;
+}
+#footer {
+    width: calc(100% - 40px);
+    background: #161616;
+    padding: 20px;
+}
