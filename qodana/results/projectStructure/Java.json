@@ -1,0 +1,8 @@
+{
+  "modules": [
+    {
+      "name": "sql-orm",
+      "languageLevel": 5
+    }
+  ]
+}

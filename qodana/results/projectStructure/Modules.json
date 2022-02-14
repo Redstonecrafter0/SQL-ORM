@@ -1,0 +1,186 @@
+{
+  "modules": [
+    {
+      "name": "sql-orm",
+      "contentEntries": [
+        {
+          "path": "file://$PROJECT_DIR$",
+          "sourceFolders": [
+            {
+              "path": "file://$PROJECT_DIR$/src/main/kotlin",
+              "type": "Source",
+              "packagePrefix": ""
+            },
+            {
+              "path": "file://$PROJECT_DIR$/src/test/kotlin",
+              "type": "TestSource",
+              "packagePrefix": ""
+            }
+          ]
+        }
+      ],
+      "orderEntries": [
+        {
+          "name": "jbr-11",
+          "type": "SDK"
+        },
+        {
+          "name": "<Module source>",
+          "type": "Own sources"
+        },
+        {
+          "name": "Maven: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.jetbrains.kotlin:kotlin-stdlib:1.6.10",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.jetbrains:annotations:13.0",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.jetbrains.kotlin:kotlin-reflect:1.6.10",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.junit.jupiter:junit-jupiter:5.8.2",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.junit.jupiter:junit-jupiter-api:5.8.2",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.opentest4j:opentest4j:1.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.junit.platform:junit-platform-commons:1.8.2",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.apiguardian:apiguardian-api:1.1.2",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.junit.jupiter:junit-jupiter-params:5.8.2",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.junit.jupiter:junit-jupiter-engine:5.8.2",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.junit.platform:junit-platform-engine:1.8.2",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.jetbrains.kotlin:kotlin-test-junit5:1.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.jetbrains.kotlin:kotlin-test:1.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: ch.qos.logback:logback-classic:1.2.3",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: ch.qos.logback:logback-core:1.2.3",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.slf4j:slf4j-api:1.7.25",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.testcontainers:testcontainers:1.16.3",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: junit:junit:4.13.2",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.hamcrest:hamcrest-core:1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.apache.commons:commons-compress:1.21",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.rnorth.duct-tape:duct-tape:1.0.8",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: com.github.docker-java:docker-java-api:3.2.12",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: com.fasterxml.jackson.core:jackson-annotations:2.10.3",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: com.github.docker-java:docker-java-transport-zerodep:3.2.12",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: com.github.docker-java:docker-java-transport:3.2.12",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: net.java.dev.jna:jna:5.8.0",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.testcontainers:junit-jupiter:1.16.3",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.testcontainers:mariadb:1.16.3",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.testcontainers:jdbc:1.16.3",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.testcontainers:database-commons:1.16.3",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.testcontainers:mysql:1.16.3",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.xerial:sqlite-jdbc:3.36.0.3",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: mysql:mysql-connector-java:8.0.28",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: com.google.protobuf:protobuf-java:3.11.4",
+          "type": "Library"
+        },
+        {
+          "name": "Maven: org.mariadb.jdbc:mariadb-java-client:3.0.3",
+          "type": "Library"
+        }
+      ]
+    }
+  ]
+}

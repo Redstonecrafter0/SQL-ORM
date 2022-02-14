@@ -1,0 +1,232 @@
+{
+  "libraries": [
+    {
+      "name": "Maven: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.6.10/kotlin-stdlib-jdk8-1.6.10.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.jetbrains.kotlin:kotlin-stdlib:1.6.10",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib/1.6.10/kotlin-stdlib-1.6.10.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.jetbrains:annotations:13.0",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/jetbrains/annotations/13.0/annotations-13.0.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib-common/1.6.10/kotlin-stdlib-common-1.6.10.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.6.10/kotlin-stdlib-jdk7-1.6.10.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.jetbrains.kotlin:kotlin-reflect:1.6.10",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.junit.jupiter:junit-jupiter:5.8.2",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter/5.8.2/junit-jupiter-5.8.2.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.junit.jupiter:junit-jupiter-api:5.8.2",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.opentest4j:opentest4j:1.2.0",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.junit.platform:junit-platform-commons:1.8.2",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.apiguardian:apiguardian-api:1.1.2",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.junit.jupiter:junit-jupiter-params:5.8.2",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-params/5.8.2/junit-jupiter-params-5.8.2.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.junit.jupiter:junit-jupiter-engine:5.8.2",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.junit.platform:junit-platform-engine:1.8.2",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.jetbrains.kotlin:kotlin-test-junit5:1.6.0",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-test-junit5/1.6.0/kotlin-test-junit5-1.6.0.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.jetbrains.kotlin:kotlin-test:1.6.0",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-test/1.6.0/kotlin-test-1.6.0.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: ch.qos.logback:logback-classic:1.2.3",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: ch.qos.logback:logback-core:1.2.3",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.slf4j:slf4j-api:1.7.25",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.testcontainers:testcontainers:1.16.3",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/testcontainers/testcontainers/1.16.3/testcontainers-1.16.3.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: junit:junit:4.13.2",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/junit/junit/4.13.2/junit-4.13.2.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.hamcrest:hamcrest-core:1.3",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.apache.commons:commons-compress:1.21",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.rnorth.duct-tape:duct-tape:1.0.8",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: com.github.docker-java:docker-java-api:3.2.12",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/com/github/docker-java/docker-java-api/3.2.12/docker-java-api-3.2.12.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: com.fasterxml.jackson.core:jackson-annotations:2.10.3",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.10.3/jackson-annotations-2.10.3.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: com.github.docker-java:docker-java-transport-zerodep:3.2.12",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/com/github/docker-java/docker-java-transport-zerodep/3.2.12/docker-java-transport-zerodep-3.2.12.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: com.github.docker-java:docker-java-transport:3.2.12",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/com/github/docker-java/docker-java-transport/3.2.12/docker-java-transport-3.2.12.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: net.java.dev.jna:jna:5.8.0",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/net/java/dev/jna/jna/5.8.0/jna-5.8.0.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.testcontainers:junit-jupiter:1.16.3",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/testcontainers/junit-jupiter/1.16.3/junit-jupiter-1.16.3.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.testcontainers:mariadb:1.16.3",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/testcontainers/mariadb/1.16.3/mariadb-1.16.3.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.testcontainers:jdbc:1.16.3",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/testcontainers/jdbc/1.16.3/jdbc-1.16.3.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.testcontainers:database-commons:1.16.3",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/testcontainers/database-commons/1.16.3/database-commons-1.16.3.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.testcontainers:mysql:1.16.3",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/testcontainers/mysql/1.16.3/mysql-1.16.3.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.xerial:sqlite-jdbc:3.36.0.3",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.36.0.3/sqlite-jdbc-3.36.0.3.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: mysql:mysql-connector-java:8.0.28",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.28/mysql-connector-java-8.0.28.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: com.google.protobuf:protobuf-java:3.11.4",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4.jar!/"
+      ]
+    },
+    {
+      "name": "Maven: org.mariadb.jdbc:mariadb-java-client:3.0.3",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/mariadb/jdbc/mariadb-java-client/3.0.3/mariadb-java-client-3.0.3.jar!/"
+      ]
+    }
+  ]
+}
