@@ -1,8 +1,8 @@
 {
   "languages": [
     "Kotlin",
-    "XML",
     "Plain text",
+    "XML",
     ".gitignore (GitIgnore)"
   ]
 }

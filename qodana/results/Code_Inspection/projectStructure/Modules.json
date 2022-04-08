@@ -7,13 +7,13 @@
           "path": "file://$PROJECT_DIR$",
           "sourceFolders": [
             {
-              "path": "file://$PROJECT_DIR$/src/test/kotlin",
-              "type": "TestSource",
+              "path": "file://$PROJECT_DIR$/src/main/kotlin",
+              "type": "Source",
               "packagePrefix": ""
             },
             {
-              "path": "file://$PROJECT_DIR$/src/main/kotlin",
-              "type": "Source",
+              "path": "file://$PROJECT_DIR$/src/test/kotlin",
+              "type": "TestSource",
               "packagePrefix": ""
             }
           ]
